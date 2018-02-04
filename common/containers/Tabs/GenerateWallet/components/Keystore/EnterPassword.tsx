@@ -55,6 +55,7 @@ export default class EnterPassword extends Component<Props, State> {
     );
   }
   private onClickGenerateFile = () => {
+    debugger;
     this.props.continue(this.state.password);
   };
 
