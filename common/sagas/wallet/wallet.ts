@@ -242,6 +242,7 @@ export function* unlockKeystore(action: UnlockKeystoreAction): SagaIterator {
 export function* unlockMnemonic(action: UnlockMnemonicAction): SagaIterator {
   let wallet;
   const { phrase, pass, path, address } = action.payload;
+  debugger;
 
   try {
     wallet = MnemonicWallet(phrase, pass, path, address);

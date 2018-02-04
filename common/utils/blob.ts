@@ -6,5 +6,6 @@ export function makeBlob(mime: string, str: string | object) {
   const blob = new Blob([str], {
     type: mime
   });
+  debugger;
   return window.URL.createObjectURL(blob);
 }

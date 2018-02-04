@@ -416,6 +416,7 @@ export class WalletDecrypt extends Component<Props, State> {
   };
 
   public onUnlock = (payload: any) => {
+    debugger;
     const { value, selectedWalletKey } = this.state;
     if (!selectedWalletKey) {
       return;
@@ -425,6 +426,7 @@ export class WalletDecrypt extends Component<Props, State> {
     // this.state.value will remain unpopulated. in this case, we can expect
     // the payload to contain the unlocked wallet info.
     const unlockValue = value && !isEmpty(value) ? value : payload;
+    debugger;
     this.WALLETS[selectedWalletKey].unlock(unlockValue);
     this.props.resetTransactionState();
   };
@@ -464,4 +466,4 @@ export default connect<StateProps, DispatchProps>(mapStateToProps, {
   resetWallet,
   resetTransactionState: reset,
   showNotification
-})(WalletDecrypt);
+})(WalletDecrypt); //在这里将action作为props注入进去了

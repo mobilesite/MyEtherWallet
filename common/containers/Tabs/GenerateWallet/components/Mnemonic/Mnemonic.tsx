@@ -35,6 +35,7 @@ export default class GenerateMnemonic extends React.Component<{}, State> {
     const { words, isConfirming, isConfirmed } = this.state;
     let content;
 
+    // debugger
     if (isConfirmed) {
       content = <FinalSteps walletType={WalletType.Mnemonic} />;
     } else {
@@ -101,6 +102,7 @@ export default class GenerateMnemonic extends React.Component<{}, State> {
   }
 
   private regenerateWordArray = () => {
+    // debugger
     this.setState({ words: generateMnemonic().split(' ') });
   };
 

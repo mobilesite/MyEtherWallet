@@ -82,6 +82,7 @@ export function decryptMnemonicToPrivKey(
     throw new Error('Invalid mnemonic');
   }
 
+  debugger;
   const seed = mnemonicToSeed(phrase, pass);
   const derived = fromMasterSeed(seed).derive(path);
   const dPrivKey = derived.privateKey;

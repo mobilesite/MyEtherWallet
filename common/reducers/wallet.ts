@@ -42,6 +42,7 @@ export const INITIAL_STATE: State = {
 };
 
 function setWallet(state: State, action: SetWalletAction): State {
+  debugger;
   return {
     ...state,
     inst: action.payload,

@@ -66,10 +66,12 @@ export default class GenerateKeystore extends Component<{}, State> {
   }
 
   private generateWalletAndContinue = (password: string) => {
+    const walletInsatance = generate();
+    debugger;
     this.setState({
       password,
       activeStep: Steps.Download,
-      wallet: generate()
+      wallet: walletInsatance
     });
   };
 

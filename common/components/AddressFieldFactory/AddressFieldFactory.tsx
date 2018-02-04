@@ -33,6 +33,7 @@ class AddressFieldFactoryClass extends React.Component<Props> {
   }
 
   public render() {
+    debugger;
     return <AddressInputFactory onChange={this.setAddress} withProps={this.props.withProps} />;
   }
 

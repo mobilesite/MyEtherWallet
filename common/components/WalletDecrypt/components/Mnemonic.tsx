@@ -113,6 +113,7 @@ class MnemonicDecryptClass extends PureComponent<Props & StateProps, State> {
 
     try {
       const seed = mnemonicToSeed(formattedPhrase, pass).toString('hex');
+      console.log('seed:', seed);
       this.setState({ seed });
     } catch (err) {
       console.log(err);
@@ -129,6 +130,7 @@ class MnemonicDecryptClass extends PureComponent<Props & StateProps, State> {
 
   private handleUnlock = (address, index) => {
     const { formattedPhrase, pass, dPath } = this.state;
+    debugger;
 
     this.props.onUnlock({
       path: `${dPath}/${index}`,

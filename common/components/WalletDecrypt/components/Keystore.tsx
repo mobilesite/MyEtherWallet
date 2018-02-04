@@ -88,6 +88,7 @@ export class KeystoreDecrypt extends PureComponent {
   };
 
   private onPasswordChange = (e: any) => {
+    console.log(this.props.value.file.length, e.target.value.length);
     const valid = this.props.value.file.length && e.target.value.length;
     this.props.onChange({
       ...this.props.value,

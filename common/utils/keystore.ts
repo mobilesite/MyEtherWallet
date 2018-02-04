@@ -2,7 +2,7 @@ import { fromPrivateKey, IFullWallet, fromV3 } from 'ethereumjs-wallet';
 import { isValidPrivKey } from 'libs/validators';
 import { stripHexPrefix } from 'libs/values';
 import { makeBlob } from 'utils/blob';
-import { N_FACTOR } from 'config';
+import { N_FACTOR } from 'config'; //N_FACTOR是1024
 
 export interface KeystoreFile {
   filename: string;
@@ -11,6 +11,7 @@ export interface KeystoreFile {
 
 export function makeKeystoreWalletBlob(wallet: IFullWallet, password: string): string {
   const keystore = wallet.toV3(password, { n: N_FACTOR });
+  debugger;
   return makeBlob('text/json;charset=UTF-8', keystore);
 }
 
